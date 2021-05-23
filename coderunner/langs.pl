@@ -40,8 +40,11 @@ if (! -e "$dirname/output") {
     mkdir "output";
 }
 
-open (RE, ">", "$dirname/output/re.cr.json");
-open (RU, ">", "$dirname/output/run.cr.json");
+open (RE, ">", "$dirname/output/re.cr.json") or 
+die "$dirname/output/re.cr.json cannot be opened";
+
+open (RU, ">", "$dirname/output/run.cr.json") or 
+die "$dirname/output/run.cr.json cannot be opened";
 
 my %re = ();
 my %ru = ();

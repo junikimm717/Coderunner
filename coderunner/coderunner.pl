@@ -27,7 +27,9 @@ if (!verifiers()) {
 }
 
 if (! -e "$dirname/output") {
+    mkdir "$dirname/output";
     system("$dirname/langs.pl");
+    system("$dirname/shell.pl");
 }
 
 # configuration hash for determining regular expressions to language types.
