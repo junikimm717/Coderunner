@@ -1,0 +1,30 @@
+{
+  "java": {
+    "rule": ".java$",
+    "run": "java %s"
+  },
+  "haskell": {
+    "rule": ".hs$",
+    "run": "runhaskell %s"
+  },
+  "perl": {
+    "rule": ".pl$",
+    "run": "perl %s"
+  },
+  "python": {
+    "rule": ".py$",
+    "run": "python3 %s"
+  },
+  "javascript": {
+    "rule": ".js$",
+    "run": "node %s"
+  },
+  "php": {
+    "rule": ".php$",
+    "run": "php %s"
+  },
+ "ruby": {
+    "rule": ".rb$",
+    "run": "ruby %s"
+  }
+}
