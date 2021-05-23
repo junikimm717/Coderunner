@@ -63,5 +63,3 @@ print RU encode_json(\%ru);
 
 close(RE);
 close(RU);
-
-# my $VERB= shift() || die "Cannot find VERB";

@@ -23,7 +23,7 @@
     "rule": ".php$",
     "run": "php %s"
   },
- "ruby": {
+  "ruby": {
     "rule": ".rb$",
     "run": "ruby %s"
   }
