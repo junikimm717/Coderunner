@@ -66,3 +66,6 @@ print RU encode_json(\%ru);
 
 close(RE);
 close(RU);
+
+# Add shells
+system("$dirname/shell.pl")

@@ -29,7 +29,6 @@ if (!verifiers()) {
 if (! -e "$dirname/output") {
     mkdir "$dirname/output";
     system("$dirname/langs.pl");
-    system("$dirname/shell.pl");
 }
 
 # configuration hash for determining regular expressions to language types.
@@ -72,7 +71,13 @@ sub run {
         print "$file does not exist.\n";
         return;
     }
+    if ( -x "$file" ) {
+        # no need to find interpreters for already executable scripts.
+        system("$file");
+        return;
+    }
     for my $k (keys %execute) {
+        # if the script is not executable, then use filetype rules.
         $execute{$k} = sprintf ("$execute{$k}", "$file");
         if ($filetype eq $k) {
             system("$execute{$k}");

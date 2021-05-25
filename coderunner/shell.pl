@@ -22,7 +22,7 @@ my @available = ('/zsh', '/bash', '/sh', '/dash');
 
 foreach my $s (@available) {
     if ($shell =~ /$s$/) {
-        $interpreter = $s;
+        $interpreter = substr $s, 1, length($s);
         last;
     }
 }
