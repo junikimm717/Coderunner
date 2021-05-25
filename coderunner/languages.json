@@ -26,5 +26,9 @@
   "ruby": {
     "rule": ".rb$",
     "run": "ruby %s"
+  },
+  "R": {
+    "rule": "(.r$|.R$)",
+    "run": "Rscript %s"
   }
 }
