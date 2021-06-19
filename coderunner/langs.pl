@@ -30,7 +30,7 @@ else {
 
 sub cmdexists {
     my $cmd = shift() || die "cmdexists did not get an arg.";
-    if (system("which $cmd > /dev/null") != 0) {
+    if (system("which $cmd 2>&1 > /dev/null") != 0) {
         return 0;
     }
     return 1;
